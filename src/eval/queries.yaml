@@ -1,0 +1,10 @@
+- q: "rheumatoid arthritis tocilizumab initial"
+  expect:
+    drug: "Tocilizumab"
+    contains: ["Rheumatoid", "Initial"]
+- q: "gca actemra streamlined"
+  expect:
+    contains: ["Giant", "cell", "arteritis"]
+- q: "psa tnf continuing"
+  expect:
+    contains: ["Psoriatic", "continuing"]
