@@ -14,6 +14,7 @@ router.get("/search", async (req, res) => {
       return res.status(400).json({ error: "Missing query parameter q" });
     }
 
+    console.log("Search request", { q, schedule, limit });
     const results = await searchDocs({ q, schedule, limit });
     return res.json({ results });
   } catch (err) {

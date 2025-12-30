@@ -1,7 +1,7 @@
 {
   "name": "free-text-pbs",
   "version": "0.1.0",
-  "description": "Free-text PBS search (Postgres + embeddings)",
+  "description": "Free-text PBS search (Postgres + Elasticsearch)",
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/api/server.ts",
@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/cmcmaster1/free-text-pbs#readme",
   "dependencies": {
+    "@elastic/elasticsearch": "^8.15.2",
+    "cheerio": "^1.1.2",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "papaparse": "^5.5.3",

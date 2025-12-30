@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PBS Free-Text Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #05070f;
+        --panel: rgba(255, 255, 255, 0.07);
+        --panel-strong: rgba(255, 255, 255, 0.14);
+        --text: #eef2ff;
+        --muted: #9aa4bd;
+        --accent: #7ee0ff;
+        --accent-2: #8fb0ff;
+        --card: #0d1224;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at 20% 20%, rgba(106, 227, 255, 0.12), transparent 35%),
+          radial-gradient(circle at 80% 0%, rgba(181, 123, 255, 0.12), transparent 35%),
+          var(--bg);
+        min-height: 100vh;
+        padding: 32px;
+      }
+      header {
+        max-width: 960px;
+        margin: 0 auto 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      h1 {
+        margin: 0;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+      }
+      .pill {
+        background: var(--panel);
+        padding: 6px 10px;
+        border-radius: 12px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .panel {
+        max-width: 960px;
+        margin: 0 auto;
+        background: var(--panel);
+        border: 1px solid var(--panel-strong);
+        border-radius: 14px;
+        padding: 18px;
+        box-shadow: 0 16px 80px rgba(0, 0, 0, 0.35);
+      }
+      form {
+        display: grid;
+        grid-template-columns: 1fr 140px 96px;
+        gap: 10px;
+        align-items: center;
+      }
+      input {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid var(--panel-strong);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        padding: 12px 14px;
+        font-size: 14px;
+        outline: none;
+      }
+      input:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 2px rgba(106, 227, 255, 0.2);
+      }
+      button {
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(120deg, var(--accent), var(--accent-2));
+        color: #0b0d14;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 12px 16px;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .results {
+        margin-top: 18px;
+        display: grid;
+        gap: 10px;
+      }
+      .result {
+        padding: 14px;
+        border-radius: 14px;
+        border: 1px solid var(--panel-strong);
+        background: var(--card);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+        display: grid;
+        gap: 8px;
+      }
+      .result-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .result-title {
+        margin: 0;
+        font-size: 18px;
+        letter-spacing: 0.2px;
+      }
+      .result-sub {
+        margin: 4px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .pill-strong {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--accent);
+        padding: 6px 10px;
+        border-radius: 10px;
+        font-size: 12px;
+        border: 1px solid var(--panel-strong);
+        white-space: nowrap;
+      }
+      .chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chip {
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--muted);
+        padding: 6px 10px;
+        border-radius: 10px;
+        font-size: 12px;
+        border: 1px solid var(--panel-strong);
+      }
+      .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 6px 12px;
+        color: var(--text);
+        font-size: 14px;
+      }
+      .meta-grid div {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--panel-strong);
+        padding: 8px 10px;
+        border-radius: 10px;
+      }
+      .meta-grid strong {
+        color: var(--muted);
+        font-weight: 500;
+        margin-right: 6px;
+      }
+      .snippet {
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.45;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px dashed var(--panel-strong);
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .toggle {
+        margin-top: 4px;
+        background: transparent;
+        color: var(--accent);
+        border: 1px solid var(--panel-strong);
+        border-radius: 8px;
+        padding: 8px 12px;
+        font-weight: 600;
+      }
+      .full-text {
+        margin-top: 8px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--panel-strong);
+        border-radius: 10px;
+        padding: 10px;
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.45;
+        white-space: pre-wrap;
+      }
+      footer {
+        max-width: 960px;
+        margin: 20px auto;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      @media (max-width: 720px) {
+        form {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>PBS Free-Text Search</h1>
+        <div class="pill">Elasticsearch · 2025-12 schedule</div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <form id="search-form">
+        <input id="q" name="q" placeholder="Search PBS restrictions…" autocomplete="off" />
+        <input id="schedule" name="schedule" placeholder="Schedule (optional)" />
+        <button type="submit" id="submit-btn">Search</button>
+      </form>
+      <div id="status" class="meta" style="margin-top: 10px;">Ready</div>
+      <div id="results" class="results"></div>
+    </section>
+
+    <footer>
+      Queries call <code>/api/search</code>. Use the schedule box to test historical ingests once available.
+    </footer>
+
+    <script>
+      const form = document.getElementById("search-form");
+      const qInput = document.getElementById("q");
+      const scheduleInput = document.getElementById("schedule");
+      const resultsEl = document.getElementById("results");
+      const statusEl = document.getElementById("status");
+      const submitBtn = document.getElementById("submit-btn");
+      const docCache = new Map();
+      let debounceHandle = null;
+      let inflightController = null;
+      const PROGRAM_MAP = {
+        GE: "General (GE)",
+        HI: "Highly Specialised Drugs (HI)",
+        SD: "Section 100 (SD)",
+        HS: "Hospital (HS)",
+      };
+
+      function escapeHtml(str = "") {
+        return str
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      function renderMeta(label, value) {
+        if (!value) return "";
+        return `<div><strong>${label}:</strong>${escapeHtml(value)}</div>`;
+      }
+
+      function stripTags(str = "") {
+        return str.replace(/<[^>]*>/g, "");
+      }
+
+      function formatList(value, maxItems = 3) {
+        if (!value) return "";
+        const items = value
+          .split(";")
+          .map((v) => v.trim())
+          .filter(Boolean);
+        const unique = Array.from(new Set(items));
+        if (unique.length === 0) return "";
+        if (unique.length <= maxItems) return unique.join("; ");
+        const shown = unique.slice(0, maxItems).join("; ");
+        return `${shown} (+${unique.length - maxItems} more)`;
+      }
+
+      function translateProgram(code) {
+        if (!code) return "";
+        return PROGRAM_MAP[code] || code;
+      }
+
+      function groupResults(results) {
+        const groups = new Map();
+        results.forEach((r) => {
+          const key = [r.title || r.drugName, r.pbsCode, r.scheduleCode].join("|");
+          const existing = groups.get(key);
+          if (!existing) {
+            groups.set(key, {
+              key,
+              title: r.title || r.drugName,
+              scheduleCode: r.scheduleCode,
+              pbsCode: r.pbsCode,
+              drugName: r.drugName,
+              brandNames: new Set(r.brandName ? r.brandName.split(";").map((s) => s.trim()) : []),
+              formulations: new Set(
+                r.formulation ? r.formulation.split(";").map((s) => s.trim()) : [],
+              ),
+              programCodes: new Set(r.programCode ? [r.programCode] : []),
+              hospitalTypes: new Set(r.hospitalType ? [r.hospitalType] : []),
+              authorityMethods: new Set(r.authorityMethod ? [r.authorityMethod] : []),
+              treatmentPhases: new Set(r.treatmentPhase ? [r.treatmentPhase] : []),
+              streamlinedCodes: new Set(r.streamlinedCode ? [r.streamlinedCode] : []),
+              snippet: r.snippet,
+              docIds: [r.id],
+              resCodes: [r.resCode],
+            });
+          } else {
+            if (r.brandName) r.brandName.split(";").forEach((b) => existing.brandNames.add(b.trim()));
+            if (r.formulation)
+              r.formulation.split(";").forEach((f) => existing.formulations.add(f.trim()));
+            if (r.programCode) existing.programCodes.add(r.programCode);
+            if (r.hospitalType) existing.hospitalTypes.add(r.hospitalType);
+            if (r.authorityMethod) existing.authorityMethods.add(r.authorityMethod);
+            if (r.treatmentPhase) existing.treatmentPhases.add(r.treatmentPhase);
+            if (r.streamlinedCode) existing.streamlinedCodes.add(r.streamlinedCode);
+            existing.docIds.push(r.id);
+            existing.resCodes.push(r.resCode);
+          }
+        });
+        return Array.from(groups.values());
+      }
+
+      function renderResults(results) {
+        resultsEl.innerHTML = "";
+        if (!results || results.length === 0) {
+          resultsEl.innerHTML = "<div class='meta'>No results.</div>";
+          return;
+        }
+        const grouped = groupResults(results);
+        grouped.forEach((g, idx) => {
+          const div = document.createElement("div");
+          div.className = "result";
+          const keyId = `group-${idx}`;
+          const chips = [
+            ...Array.from(g.authorityMethods),
+            ...Array.from(g.treatmentPhases),
+            ...Array.from(g.streamlinedCodes).map((c) => `Streamlined ${c}`),
+          ]
+            .filter(Boolean)
+            .map((c) => `<span class="chip">${escapeHtml(c)}</span>`)
+            .join("");
+          div.innerHTML = `
+            <div class="result-header">
+              <div>
+                <h3 class="result-title">${escapeHtml(g.title)}</h3>
+                ${g.brandNames.size > 0 ? `<div class="result-sub">${escapeHtml(Array.from(g.brandNames).join("; "))}</div>` : ""}
+              </div>
+              <div class="chip-row" style="justify-content: flex-end; text-align: right;">
+                ${g.pbsCode ? `<span class="pill-strong">PBS ${escapeHtml(g.pbsCode)}</span>` : ""}
+                <span class="pill-strong">Schedule ${escapeHtml(g.scheduleCode)}</span>
+              </div>
+            </div>
+            <div class="chip-row">${chips}</div>
+            <div class="meta-grid">
+              ${renderMeta("Drug", g.drugName)}
+              ${renderMeta("Formulation", formatList(Array.from(g.formulations).join("; ")))}
+              ${renderMeta(
+                "Program",
+                Array.from(g.programCodes)
+                  .map((p) => translateProgram(p))
+                  .filter(Boolean)
+                  .join(", "),
+              )}
+              ${renderMeta("Hospital type", Array.from(g.hospitalTypes).join(", "))}
+            </div>
+            <div class="snippet">${escapeHtml(stripTags(g.snippet || "").slice(0, 260))}</div>
+            <button class="toggle" data-key="${keyId}">Show full text (${g.docIds.length})</button>
+            <div class="full-text" id="full-${keyId}" hidden></div>
+          `;
+          const toggleBtn = div.querySelector(".toggle");
+          const fullTextEl = div.querySelector(`#full-${keyId}`);
+          toggleBtn.addEventListener("click", async () => {
+            if (fullTextEl.hidden) {
+              fullTextEl.hidden = false;
+              fullTextEl.textContent = "Loading full text…";
+              try {
+                const bodies = [];
+                for (const id of g.docIds) {
+                  if (docCache.has(id)) {
+                    bodies.push({
+                      id,
+                      body: docCache.get(id).body,
+                      resCode: docCache.get(id).res_code,
+                    });
+                    continue;
+                  }
+                  const res = await fetch(`/api/doc/${id}`);
+                  const body = await res.json();
+                  if (!res.ok) throw new Error(body.error || "Failed to load doc");
+                  docCache.set(id, body.doc);
+                  bodies.push({ id, body: body.doc?.body, resCode: body.doc?.res_code });
+                }
+                const uniqueBodies = [];
+                bodies.forEach((b) => {
+                  if (!b.body) return;
+                  if (!uniqueBodies.find((x) => x.body === b.body)) {
+                    uniqueBodies.push(b);
+                  }
+                });
+                if (uniqueBodies.length === 0) {
+                  fullTextEl.textContent = "No text available.";
+                } else {
+                  fullTextEl.innerHTML = uniqueBodies
+                    .map(
+                      (b, idx) =>
+                        `<div style="margin-bottom:8px;"><div style="color: var(--muted); font-size: 13px; margin-bottom:4px;">Restriction ${idx + 1}${b.resCode ? ` • ${escapeHtml(b.resCode)}` : ""}</div><div>${escapeHtml(b.body)}</div></div>`,
+                    )
+                    .join("");
+                }
+              } catch (err) {
+                console.error(err);
+                fullTextEl.textContent = "Failed to load full text.";
+              }
+            } else {
+              fullTextEl.hidden = true;
+            }
+            toggleBtn.textContent = fullTextEl.hidden ? "Show full text" : "Hide full text";
+          });
+          resultsEl.appendChild(div);
+        });
+      }
+
+      async function runSearch(event) {
+        event?.preventDefault();
+        const q = qInput.value.trim();
+        const schedule = scheduleInput.value.trim();
+        if (!q) {
+          statusEl.textContent = "Enter a query to search";
+          return;
+        }
+        if (inflightController) inflightController.abort();
+        inflightController = new AbortController();
+        submitBtn.disabled = true;
+        statusEl.textContent = "Searching…";
+        try {
+          const params = new URLSearchParams({ q, limit: "10" });
+          if (schedule) params.set("schedule", schedule);
+          const res = await fetch(`/api/search?${params.toString()}`, {
+            signal: inflightController.signal,
+          });
+          const body = await res.json();
+          if (!res.ok) throw new Error(body.error || "Search failed");
+          renderResults(body.results || []);
+          statusEl.textContent = `Found ${body.results?.length ?? 0} result(s)`;
+        } catch (err) {
+          if (err.name === "AbortError") return;
+          console.error(err);
+          statusEl.textContent = "Search failed";
+        } finally {
+          submitBtn.disabled = false;
+          inflightController = null;
+        }
+      }
+
+      function scheduleSearch() {
+        if (debounceHandle) clearTimeout(debounceHandle);
+        debounceHandle = setTimeout(() => {
+          runSearch();
+        }, 250);
+      }
+
+      form.addEventListener("submit", runSearch);
+      qInput.addEventListener("input", () => {
+        if (!qInput.value.trim()) {
+          statusEl.textContent = "Ready";
+          resultsEl.innerHTML = "";
+          return;
+        }
+        statusEl.textContent = "Typing…";
+        scheduleSearch();
+      });
+      scheduleInput.addEventListener("input", () => {
+        if (qInput.value.trim()) scheduleSearch();
+      });
+    </script>
+  </body>
+</html>

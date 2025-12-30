@@ -1,0 +1,2620 @@
+[
+  {
+    "abbr": "CA",
+    "long": "calcium",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 100
+  },
+  {
+    "abbr": "HCO3",
+    "long": "bicarbonate",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 100
+  },
+  {
+    "abbr": "MG",
+    "long": "magnesium",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 100
+  },
+  {
+    "abbr": "NACL",
+    "long": "sodium chloride",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 100
+  },
+  {
+    "abbr": "RA",
+    "long": "rheumatoid arthritis",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 100
+  },
+  {
+    "abbr": "SLE",
+    "long": "systemic lupus erythematosus",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 100
+  },
+  {
+    "abbr": "AIDS",
+    "long": "acquired immunodeficiency syndrome",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "ASA",
+    "long": "acetylsalicylic acid",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "BP",
+    "long": "blood pressure",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "BSA",
+    "long": "body surface area",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "CNS",
+    "long": "central nervous system",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "COPD",
+    "long": "chronic obstructive pulmonary disease",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "CSF",
+    "long": "cerebrospinal fluid",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "CT",
+    "long": "computed tomography",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "CU",
+    "long": "cubic",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "ESR",
+    "long": "erythrocyte sedimentation rate",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "GFR",
+    "long": "glomerular filtration rate",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "GI",
+    "long": "gastrointestinal",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "HG",
+    "long": "mercury",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "HIV",
+    "long": "human immunodeficiency virus",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "IU",
+    "long": "international unit",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "K",
+    "long": "potassium",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "MI",
+    "long": "myocardial infarction",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "MO",
+    "long": "month",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "MRI",
+    "long": "magnetic resonance imaging",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "NA",
+    "long": "sodium",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "P",
+    "long": "phosphorus; pressure",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "PO",
+    "long": "orally",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "Q",
+    "long": "every",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "RBC",
+    "long": "red blood cell",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "SBE",
+    "long": "subacute bacterial endocarditis",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "SOLN",
+    "long": "solution",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "SP",
+    "long": "species",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "SPP",
+    "long": "species",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "TB",
+    "long": "tuberculosis",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "URI",
+    "long": "upper respiratory infection",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "URTI",
+    "long": "upper respiratory tract infection",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "UTI",
+    "long": "urinary tract infection",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "WT",
+    "long": "weight",
+    "source": "wiki_med_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "AA",
+    "long": "ana",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "AQ",
+    "long": "aqua",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "BIS",
+    "long": "bis",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "BUCC",
+    "long": "bucca",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "CAP CAPS",
+    "long": "capsula",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "C C",
+    "long": "cum",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "ELIX",
+    "long": "elixir",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "H HR HOR",
+    "long": "hora",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "IJ INJ",
+    "long": "injectio",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "LIQ",
+    "long": "liquor",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "LOT",
+    "long": "lotio",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "M M MIT MITT",
+    "long": "mitte",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "MANE",
+    "long": "mane",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "MAX",
+    "long": "maximum",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "PER",
+    "long": "per",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "S",
+    "long": "signa",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "S",
+    "long": "sine",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "SOL",
+    "long": "solutio",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "ST",
+    "long": "stet",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "SUSP",
+    "long": "suspension",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "SYR",
+    "long": "syrupus",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "TAB",
+    "long": "tabella",
+    "source": "wiki_rx_abbrev",
+    "kind": "drug",
+    "score": 80
+  },
+  {
+    "abbr": "CDC",
+    "long": "Centers for Disease Control and Prevention",
+    "source": "wiki_med_abbrev",
+    "kind": "disease",
+    "score": 60
+  },
+  {
+    "abbr": "GVHD",
+    "long": "graft-versus-host disease",
+    "source": "wiki_med_abbrev",
+    "kind": "disease",
+    "score": 60
+  },
+  {
+    "abbr": "SIDS",
+    "long": "sudden infant death syndrome",
+    "source": "wiki_med_abbrev",
+    "kind": "disease",
+    "score": 60
+  },
+  {
+    "abbr": "ABG",
+    "long": "arterial blood gas",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ACE",
+    "long": "angiotensin-converting enzyme",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ACTH",
+    "long": "adrenocorticotropic hormone",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "AFVSS",
+    "long": "Afebrile, vital signs stable[5]",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ADH",
+    "long": "antidiuretic hormone",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "AED",
+    "long": "automated external defibrillator",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ALP",
+    "long": "alkaline phosphatase",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ALT",
+    "long": "alanine aminotransferase",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "AST",
+    "long": "aspartate aminotransferase",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ATP",
+    "long": "adenosine triphosphate",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BCG",
+    "long": "bacille Calmette-Guérin",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BD BID",
+    "long": "2 times a day",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BIBA",
+    "long": "brought in by ambulance",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BIBP BIBPD",
+    "long": "brought in by police",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BLS",
+    "long": "basic life support",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BMR",
+    "long": "basal metabolic rate",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BPAD",
+    "long": "bipolar affective disorder",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BPD",
+    "long": "borderline personality disorder",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BR",
+    "long": "bedside rounds",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BUN",
+    "long": "blood urea nitrogen",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "C",
+    "long": "Celsius; centigrade; complement",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CAMP CAMP",
+    "long": "cyclic adenosine monophosphate",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CBC",
+    "long": "complete blood count",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CGY",
+    "long": "centigray",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CI",
+    "long": "curie",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CK",
+    "long": "creatine kinase",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CL",
+    "long": "chloride; chlorine",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CM",
+    "long": "centimeter(s)/centimetre(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CO2",
+    "long": "carbon dioxide",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CPK",
+    "long": "creatine phosphokinase",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CPK MB",
+    "long": "creatine phosphokinase muscle bandisoenzyme",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CPR",
+    "long": "cardiopulmonary resuscitation",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "D C",
+    "long": "dilation and curettage",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "DL",
+    "long": "deciliter(s)/decilitre(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "DNA",
+    "long": "deoxyribonucleic acid",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "DTP",
+    "long": "diphtheria-tetanus-pertussis(toxoids/vaccine)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "D W",
+    "long": "dextrose in water",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ECF",
+    "long": "extracellular fluid",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ECG",
+    "long": "electrocardiogram",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "EEG",
+    "long": "electroencephalogram",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "EGD",
+    "long": "esophagogastroduodenoscopy",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ENT",
+    "long": "ear nose and throat",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ERCP",
+    "long": "endoscopic retrograde cholangiopancreatography",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "F",
+    "long": "Fahrenheit",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "FDA",
+    "long": "U.S. Food and Drug Administration",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "FT",
+    "long": "foot; feet",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "FUO",
+    "long": "fever of unknown origin",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "G G",
+    "long": "gram(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "G6PD",
+    "long": "glucose-6-phosphate dehydrogenase",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "GU",
+    "long": "genitourinary",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "GY",
+    "long": "gray",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "H H HR",
+    "long": "hour(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HB",
+    "long": "hemoglobin",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HCL",
+    "long": "hydrochloric acid; hydrochloride",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HCT",
+    "long": "hematocrit",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HIPAA",
+    "long": "Health Insurance Portability and Accountability Act",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HLA",
+    "long": "human leukocyte antigen",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HMG COA",
+    "long": "hydroxymethyl glutaryl coenzyme A",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HS",
+    "long": "at bedtime",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HZ",
+    "long": "hertz",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ICF",
+    "long": "intracellular fluid",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ICU",
+    "long": "intensive care unit",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "IGA",
+    "long": "etc. immunoglobulin A",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "IL",
+    "long": "interleukin",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "IM",
+    "long": "intramuscular(ly)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "INR",
+    "long": "international normalized ratio",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "IPPB",
+    "long": "intermittent positive pressure breathing",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "IV",
+    "long": "intravenous(ly)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "IVU",
+    "long": "intravenous urography",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "KCAL",
+    "long": "kilocalorie(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "KG",
+    "long": "kilogram(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "L",
+    "long": "liter(s)/litre(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "LB",
+    "long": "pound(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "LDH",
+    "long": "lactic dehydrogenase",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "LDLC",
+    "long": "low-density lipoprotein cholesterol",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "M",
+    "long": "molar",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "M",
+    "long": "meter(s)/metre(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MANE",
+    "long": "in the morning",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MC",
+    "long": "micro-",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MCH",
+    "long": "mean corpuscular hemoglobin",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MCHC",
+    "long": "mean corpuscular hemoglobin concentration",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MCI",
+    "long": "millicurie",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MCV",
+    "long": "mean corpuscular volume",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MEQ",
+    "long": "Milliequivalent",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MIDI",
+    "long": "midday",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MG",
+    "long": "milligram(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MIC",
+    "long": "minimum inhibitory concentration",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MIN S",
+    "long": "minute(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MIU",
+    "long": "milli-international unit",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ML ML",
+    "long": "milliliter(s)/millilitre(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MM",
+    "long": "millimeter(s)/millimetre(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MMOL",
+    "long": "millimole(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MOL",
+    "long": "wt molecular weight",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MOSM",
+    "long": "milliosmole(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "N",
+    "long": "nitrogen; normal",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "NAEON",
+    "long": "no adverse events overnight[6]",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "NG",
+    "long": "nanogram",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "NM",
+    "long": "nanometer",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "NMOL",
+    "long": "nanomole",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "NOCTE",
+    "long": "at night",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "NPO",
+    "long": "nothing by mouth/nil by mouth",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "NSAID",
+    "long": "nonsteroidal anti-inflammatory drug",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "O2",
+    "long": "oxygen",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "OTC",
+    "long": "over-the-counter",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "OZ",
+    "long": "ounce(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PACO2",
+    "long": "alveolar carbon dioxide partial pressure",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PACO2",
+    "long": "arterial carbon dioxide partial pressure",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PAO2",
+    "long": "alveolar oxygen partial pressure",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PAO2",
+    "long": "arterial oxygen partial pressure",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PAS",
+    "long": "periodic acid-Schiff",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PCO2",
+    "long": "carbon dioxide partial pressure",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PCR",
+    "long": "polymerase chain reaction",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PET",
+    "long": "positron emission tomography",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PG",
+    "long": "picogram(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PH",
+    "long": "hydrogen ion concentration",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PMN",
+    "long": "polymorphonuclear leukocyte",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PO2",
+    "long": "oxygen partial pressure",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PPD",
+    "long": "purified protein derivative",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PPM",
+    "long": "parts per million",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PRN",
+    "long": "as needed",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PT",
+    "long": "prothrombin time",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PTT",
+    "long": "partial thromboplastin time",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "QID",
+    "long": "4 times a day",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "QN",
+    "long": "every night",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "RNA",
+    "long": "ribonucleic acid",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "SAO2",
+    "long": "arterial oxygen saturation",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "SC",
+    "long": "subcutaneous(ly)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "S E",
+    "long": "side-effect(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "SI",
+    "long": "International System of Units",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "SP GR",
+    "long": "specific gravity",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "SQ",
+    "long": "square",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "SSRI",
+    "long": "selective serotonin reuptake inhibitor",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "STS",
+    "long": "serologic test(s) for syphilis",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "T A",
+    "long": "tonsillectomy and adenoidectomy",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "TDS",
+    "long": "3 times a day",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "TIBC",
+    "long": "total iron-binding capacity",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "TID",
+    "long": "3 times a day",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "TPN",
+    "long": "total parenteral nutrition",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "WBC",
+    "long": "white blood cell",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "WHO",
+    "long": "World Health Organization",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "WR",
+    "long": "ward round",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CI",
+    "long": "microcurie",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "G",
+    "long": "microgram(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "L",
+    "long": "microliter(s)/microlitre(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "M",
+    "long": "micrometer(s)/micrometre(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MOL",
+    "long": "micromole(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "OSM",
+    "long": "micro-osmole(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "M",
+    "long": "millimicron(s)",
+    "source": "wiki_med_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "A C",
+    "long": "ante cibum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "A C H S AC HS",
+    "long": "ante cibum et hora somni",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "A D",
+    "long": "auris dextra",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "AD ADD",
+    "long": "adde addatur",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "AD LIB",
+    "long": "ad libitum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ADMOV",
+    "long": "admove admoveatur",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "AD US",
+    "long": "ad usum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q",
+    "long": "æquales",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "AGIT",
+    "long": "agita",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ALT D ALT DIEB",
+    "long": "alternis diebus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "ALT H ALT HOR",
+    "long": "alternis horis",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "A M",
+    "long": "ante meridiem",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "AMP",
+    "long": "ampulla",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "AQ BULL",
+    "long": "aqua bulliens",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "AQ COM",
+    "long": "aqua communis",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "AQ DEST",
+    "long": "aqua destillata",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "AQ FERV",
+    "long": "aqua fervens",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "A L A S",
+    "long": "auris laeva, auris sinistra",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "A U",
+    "long": "auris utraque",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BDS B D S",
+    "long": "bis die sumendum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BIB",
+    "long": "bibe",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "B I D B D",
+    "long": "bis in die",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BIS IND",
+    "long": "bis indies",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BIS IN 7 D",
+    "long": "bis in septem diebus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BOL",
+    "long": "bolus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "BP PH BR",
+    "long": "Pharmacopoeia Britannica",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CAP",
+    "long": "capiat",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "C M",
+    "long": "cras mane",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "C M S",
+    "long": "cras mane sumendus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CIB",
+    "long": "cibus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "C C",
+    "long": "cum cibo",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CF",
+    "long": "confer",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "C N",
+    "long": "cras nocte",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "COCHL",
+    "long": "cochleare",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "COCHL AMPL",
+    "long": "cochleare amplum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "COCHL INFANT",
+    "long": "cochleare infantis",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "COCHL MAG",
+    "long": "cochleare magnum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "COCHL MOD",
+    "long": "cochleare modicum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "COCHL PARV",
+    "long": "cochleare parvum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "COLET",
+    "long": "coletur",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "COMP",
+    "long": "compositus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CONTIN",
+    "long": "continuetur",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CPT",
+    "long": "capiat",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CUJ",
+    "long": "cujus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "C V",
+    "long": "cras vespere",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CYATH",
+    "long": "cyathus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "CYATH VINOS",
+    "long": "cyathus vinosus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "D D",
+    "long": "die [or] dosis",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "DECOCT",
+    "long": "decoctum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "DET",
+    "long": "detur",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "DIEB ALT",
+    "long": "diebus alternis",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "DIM",
+    "long": "dimidius",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "D IN P",
+    "long": "divide in partes æquales",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "DIV",
+    "long": "divide",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "D T D",
+    "long": "dentur tales doses",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "E M P",
+    "long": "ex modo prescripto",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "EMULS",
+    "long": "emulsum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "EX AQ",
+    "long": "ex aqua",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "EXHIB",
+    "long": "exhibiatur",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "F",
+    "long": "fiat",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "F H",
+    "long": "fiat haustus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "FL FLD",
+    "long": "fluidus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "F M",
+    "long": "fiat mistura",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "F PIL",
+    "long": "fiat pilula",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "F S A",
+    "long": "fiat secundum artem",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "FT",
+    "long": "fiat",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "GARG",
+    "long": "gargarisma",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "GR",
+    "long": "granum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "GTT S",
+    "long": "gutta(e)",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "GUTT",
+    "long": "gutta(e)",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HABT",
+    "long": "habeat",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HOR ALT",
+    "long": "hora alternis",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HOR DECUB",
+    "long": "hora decubitus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HOR INTERMED",
+    "long": "horis intermediis",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "HOR TERT",
+    "long": "horis tertiis",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "H S",
+    "long": "hora somni (at the hour of sleep)",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "IND",
+    "long": "indies",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "INF",
+    "long": "infusum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "I",
+    "long": "unus tabuletta",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "II",
+    "long": "duo tabuletta",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "III",
+    "long": "tres tabuletta",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "LAT DOL",
+    "long": "lateri dolenti",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "LB",
+    "long": "libra",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "L C D",
+    "long": "liquor carbonis detergens",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "LIN",
+    "long": "linimentum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "M M",
+    "long": "misce",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "M D U",
+    "long": "more dicto utendus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MIN",
+    "long": "minimum [or] minim [or] minutum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MIST",
+    "long": "mistura",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "MOD PR SCRIPT",
+    "long": "modo præscripto",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "NEBUL NEB",
+    "long": "nebula",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "NOCT",
+    "long": "nocte",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "NON REP",
+    "long": "non repetatur",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "NPO N P O",
+    "long": "nil per os",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "O D",
+    "long": "omni die",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "O D",
+    "long": "oculus dexter",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "O M",
+    "long": "omni mane",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "OMN BIH",
+    "long": "omni bihora",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "OMN HOR",
+    "long": "omni hora",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "O N",
+    "long": "omni nocte",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "O S",
+    "long": "oculus sinister",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "O U",
+    "long": "oculus uterque",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "P",
+    "long": "perstetur",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PART Q",
+    "long": "partes æquales",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "P C",
+    "long": "post cibum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "P C H S PC HS",
+    "long": "post cibum et hora somni",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PH BR BP",
+    "long": "Pharmacopoeia Britannica",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PH EUR",
+    "long": "Pharmacopoeia Europaea",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PH INT",
+    "long": "Pharmacopoeia Internationalis",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PIG PIGM",
+    "long": "pigmentum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "P M",
+    "long": "post meridiem",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "P O",
+    "long": "per os",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PPT",
+    "long": "præparata",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "P R PR",
+    "long": "per rectum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "P R N PRN",
+    "long": "pro re nata",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PT",
+    "long": "perstetur",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "PULV",
+    "long": "pulvis",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "P V PV",
+    "long": "per vaginam",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q",
+    "long": "quaque",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q 1 H Q 1",
+    "long": "quaque 1 hora",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q A D",
+    "long": "quaque alternis die",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q A M",
+    "long": "quaque die ante meridiem",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q D Q 1 D",
+    "long": "quaque die",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q D A M",
+    "long": "quaque die ante meridiem",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q D P M",
+    "long": "quaque die post meridiem",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q D S",
+    "long": "quater die sumendus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q P M",
+    "long": "quaque die post meridiem",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q H",
+    "long": "quaque hora",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q H S",
+    "long": "quaque hora somni",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q I D",
+    "long": "quater in die",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q L",
+    "long": "quantum libet",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q N",
+    "long": "quaque nocte",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q O D",
+    "long": "quaque altera die",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q Q",
+    "long": "quaque",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q Q H",
+    "long": "quater quaque hora",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q S",
+    "long": "quantum sufficiat (subjunctive), quantum sufficit (indicative), quantum satis",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q S A D",
+    "long": "add up to",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "Q V",
+    "long": "quantum volueris [or] quod vide",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "REP REPT",
+    "long": "repetatur",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "RX RX RX RP",
+    "long": "recipe",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "REP",
+    "long": "repetatur",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "S A",
+    "long": "secundum artem",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "SEM",
+    "long": "semen",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "S I D",
+    "long": "semel in die",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "SIG",
+    "long": "signa, signetur",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "SING",
+    "long": "singulorum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "SL S L",
+    "long": "sub lingua",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "S O S SI OP SIT",
+    "long": "si opus sit",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "S S SS",
+    "long": "semisse",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "STAT",
+    "long": "statim",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "SUM",
+    "long": "sumat [or] sumendum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "SUPP",
+    "long": "suppositorium",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "TAL T",
+    "long": "talus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "T D S TDS",
+    "long": "ter die sumendum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "T I D T D",
+    "long": "ter in die",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "TINCT",
+    "long": "tinctura",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "TR TINC TINCT",
+    "long": "tinctura",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "TRIT",
+    "long": "triturate",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "TROCH",
+    "long": "trochiscus",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "U D UT DICT",
+    "long": "ut dictum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "UNG",
+    "long": "unguentum",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  },
+  {
+    "abbr": "VAG",
+    "long": "vagine",
+    "source": "wiki_rx_abbrev",
+    "kind": "other",
+    "score": 0
+  }
+]

@@ -22,9 +22,8 @@ CREATE TABLE IF NOT EXISTS pbs_doc (
   title TEXT NOT NULL,
   body TEXT NOT NULL,
   body_tsv TSVECTOR GENERATED ALWAYS AS (
-    to_tsvector('english', unaccent(coalesce(title, '') || ' ' || coalesce(body, '')))
+    to_tsvector('english', coalesce(title, '') || ' ' || coalesce(body, ''))
   ) STORED,
-  embedding VECTOR(1536),
   source_json JSONB NOT NULL,
   UNIQUE(schedule_code, pbs_code, res_code, brand_name)
 );

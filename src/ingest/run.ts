@@ -4,6 +4,7 @@ import { parseCsvTable } from "./parse.js";
 import { downloadScheduleZip, resolveScheduleUrl } from "./download.js";
 import { embedMissingDocs } from "./embed.js";
 import { upsertScheduleAndDocs } from "./upsert.js";
+import { indexDocsToElasticsearch } from "../search/elasticsearch.js";
 
 export interface IngestOptions {
   targetDate?: string;
@@ -37,6 +38,8 @@ export async function runIngest(options: IngestOptions = {}) {
     },
     docs,
   );
+
+  await indexDocsToElasticsearch(docs);
 
   await embedMissingDocs({ scheduleCode: resolved.scheduleCode });
 
