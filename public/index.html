@@ -68,7 +68,8 @@
         gap: 10px;
         align-items: center;
       }
-      input {
+      input,
+      select {
         width: 100%;
         border-radius: 10px;
         border: 1px solid var(--panel-strong);
@@ -78,7 +79,24 @@
         font-size: 14px;
         outline: none;
       }
-      input:focus {
+      select {
+        appearance: none;
+        background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+          linear-gradient(135deg, var(--muted) 50%, transparent 50%),
+          linear-gradient(to right, transparent, transparent);
+        background-position:
+          calc(100% - 16px) calc(50% - 2px),
+          calc(100% - 11px) calc(50% - 2px),
+          calc(100% - 36px) 50%;
+        background-size:
+          5px 5px,
+          5px 5px,
+          1px 24px;
+        background-repeat: no-repeat;
+        padding-right: 36px;
+      }
+      input:focus,
+      select:focus {
         border-color: var(--accent);
         box-shadow: 0 0 0 2px rgba(106, 227, 255, 0.2);
       }
@@ -211,14 +229,16 @@
     <header>
       <div>
         <h1>PBS Free-Text Search</h1>
-        <div class="pill">Elasticsearch · 2025-12 schedule</div>
+        <div class="pill" id="last-updated">Last Updated: loading…</div>
       </div>
     </header>
 
     <section class="panel">
       <form id="search-form">
         <input id="q" name="q" placeholder="Search PBS restrictions…" autocomplete="off" />
-        <input id="schedule" name="schedule" placeholder="Schedule (optional)" />
+        <select id="schedule" name="schedule" aria-label="Schedule">
+          <option value="">Schedule (latest)</option>
+        </select>
         <button type="submit" id="submit-btn">Search</button>
       </form>
       <div id="status" class="meta" style="margin-top: 10px;">Ready</div>
@@ -239,6 +259,7 @@
       const docCache = new Map();
       let debounceHandle = null;
       let inflightController = null;
+      const lastUpdatedEl = document.getElementById("last-updated");
       const PROGRAM_MAP = {
         GE: "General (GE)",
         HI: "Highly Specialised Drugs (HI)",
@@ -280,6 +301,40 @@
       function translateProgram(code) {
         if (!code) return "";
         return PROGRAM_MAP[code] || code;
+      }
+
+      async function loadLatestSchedule() {
+        if (!lastUpdatedEl) return;
+        try {
+          const res = await fetch("/api/meta");
+          const body = await res.json();
+          if (!res.ok) throw new Error(body.error || "Failed to load meta");
+          if (!body.latestSchedule) {
+            lastUpdatedEl.textContent = "Last Updated: unknown";
+            return;
+          }
+          const { scheduleCode } = body.latestSchedule;
+          lastUpdatedEl.textContent = `Last Updated: ${scheduleCode} schedule`;
+        } catch (err) {
+          lastUpdatedEl.textContent = "Last Updated: unavailable";
+        }
+      }
+
+      async function loadSchedules() {
+        try {
+          const res = await fetch("/api/schedules");
+          const body = await res.json();
+          if (!res.ok) throw new Error(body.error || "Failed to load schedules");
+          const options = body.schedules || [];
+          scheduleInput.innerHTML = `<option value="">Schedule (latest)</option>${options
+            .map(
+              (s) =>
+                `<option value="${escapeHtml(s.scheduleCode)}">${escapeHtml(s.scheduleCode)}</option>`,
+            )
+            .join("")}`;
+        } catch (err) {
+          scheduleInput.innerHTML = `<option value="">Schedule (latest)</option>`;
+        }
       }
 
       function groupResults(results) {
@@ -423,6 +478,9 @@
         });
       }
 
+      loadLatestSchedule();
+      loadSchedules();
+
       async function runSearch(event) {
         event?.preventDefault();
         const q = qInput.value.trim();
@@ -472,7 +530,7 @@
         statusEl.textContent = "Typing…";
         scheduleSearch();
       });
-      scheduleInput.addEventListener("input", () => {
+      scheduleInput.addEventListener("change", () => {
         if (qInput.value.trim()) scheduleSearch();
       });
     </script>

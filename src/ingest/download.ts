@@ -1,3 +1,4 @@
+import { load } from "cheerio";
 import { fetch } from "undici";
 
 export interface ResolvedSchedule {
@@ -38,29 +39,52 @@ function candidatePatterns(base: string, scheduleCode: string): string[] {
 const USER_AGENT =
   "Mozilla/5.0 (compatible; free-text-pbs/0.1; +https://github.com/cmcmaster1/free-text-pbs)";
 
-function sanitizeHref(href: string): string {
-  // Handles relative "../downloads/..." style hrefs seen on the PBS site.
-  return href.replace("/../", "/");
-}
-
-async function scrapeDownloadsPage(base: string): Promise<ResolvedSchedule | null> {
+async function scrapeDownloadsPage(downloadPageUrl: string): Promise<ResolvedSchedule | null> {
   try {
-    const res = await fetch(base, { headers: { "user-agent": USER_AGENT } });
+    const res = await fetch(downloadPageUrl, { headers: { "user-agent": USER_AGENT } });
+    const debug = process.env.PBS_DOWNLOAD_DEBUG === "1";
+    if (debug) {
+      console.log("Download page response", {
+        url: downloadPageUrl,
+        status: res.status,
+        ok: res.ok,
+      });
+    }
     if (!res.ok) return null;
     const html = await res.text();
-    const match = html.match(/href="([^"]*PBS-API-CSV\\.zip)"/i);
-    if (!match) return null;
+    const $ = load(html);
+    let href: string | null = null;
 
-    const [, rawHref] = match;
-    if (!rawHref) return null;
-    const href = sanitizeHref(rawHref);
-    const url = new URL(href, base).toString();
-    const dateMatch = href.match(/(\\d{4})-(\\d{2})-(\\d{2})-PBS-API-CSV\\.zip/i);
+    $("a[href]").each((_, el) => {
+      if (href) return;
+      const title = ($(el).attr("title") ?? "").toLowerCase();
+      const text = $(el).text().toLowerCase();
+      if (title.includes("pbs api csv") || text.includes("pbs api csv")) {
+        href = $(el).attr("href") ?? null;
+      }
+    });
+
+    if (debug) {
+      console.log("Download page match", { href });
+    }
+    if (!href) return null;
+    const resolvedUrl = new URL(href, downloadPageUrl);
+    const pathname = resolvedUrl.pathname;
+
+    const dateMatch =
+      pathname.match(/(\d{4})-(\d{2})-(\d{2})-PBS-API-CSV/i) ??
+      pathname.match(/(\d{4})-(\d{2})-(\d{2})-PBS-API-CSV.*\.zip/i);
+    if (debug) {
+      console.log("Download page date match", {
+        pathname,
+        dateMatch: Boolean(dateMatch),
+      });
+    }
     if (!dateMatch) return null;
     const [_, yearStr, monthStr] = dateMatch; // eslint-disable-line @typescript-eslint/no-unused-vars
     const effectiveDate = new Date(Date.UTC(Number(yearStr), Number(monthStr) - 1, 1));
     const scheduleCode = `${yearStr}-${monthStr}`;
-    return { scheduleCode, effectiveDate, url };
+    return { scheduleCode, effectiveDate, url: resolvedUrl.toString() };
   } catch (err) {
     console.warn("Failed to scrape downloads page", err);
     return null;
@@ -80,9 +104,19 @@ async function headOk(url: string): Promise<boolean> {
 export async function resolveScheduleUrl(
   targetDate = new Date(),
   lookbackMonths = getLookbackMonths(),
+  preferDownloadPage = false,
 ): Promise<ResolvedSchedule> {
   const base = process.env.PBS_DOWNLOAD_BASE ?? "https://www.pbs.gov.au/downloads";
+  const downloadPage =
+    process.env.PBS_DOWNLOAD_PAGE ?? "https://www.pbs.gov.au/info/browse/download";
   const target = firstOfMonthUtc(targetDate);
+
+  if (preferDownloadPage) {
+    const scraped = await scrapeDownloadsPage(downloadPage);
+    if (scraped) {
+      return scraped;
+    }
+  }
 
   for (let i = 0; i <= lookbackMonths; i += 1) {
     const candidateDate = new Date(Date.UTC(target.getUTCFullYear(), target.getUTCMonth() - i, 1));
@@ -103,7 +137,7 @@ export async function resolveScheduleUrl(
     }
   }
 
-  const scraped = await scrapeDownloadsPage(base);
+  const scraped = await scrapeDownloadsPage(downloadPage);
   if (scraped) {
     return scraped;
   }

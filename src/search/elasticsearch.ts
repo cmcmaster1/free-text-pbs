@@ -31,7 +31,8 @@ interface SearchParamsLite {
 
 const ES_URL = process.env.ELASTICSEARCH_URL;
 const ES_API_KEY = process.env.ELASTICSEARCH_API_KEY;
-const ES_INDEX = process.env.ELASTICSEARCH_INDEX ?? "pbs-docs";
+const ES_INDEX_BASE = process.env.ELASTICSEARCH_INDEX ?? "pbs-docs";
+const ES_ALIAS_CURRENT = `${ES_INDEX_BASE}-current`;
 
 let client: Client | null = null;
 
@@ -45,13 +46,17 @@ function getClient(): Client | null {
   return client;
 }
 
-async function ensureIndex(): Promise<void> {
+function indexNameForSchedule(scheduleCode: string): string {
+  return `${ES_INDEX_BASE}-${scheduleCode}`;
+}
+
+async function ensureIndex(indexName: string): Promise<void> {
   const es = getClient();
   if (!es) return;
-  const exists = await es.indices.exists({ index: ES_INDEX });
+  const exists = await es.indices.exists({ index: indexName });
   if (!exists) {
     await es.indices.create({
-      index: ES_INDEX,
+      index: indexName,
       settings: {
         analysis: {
           analyzer: {
@@ -82,13 +87,47 @@ async function ensureIndex(): Promise<void> {
   }
 }
 
-export async function indexDocsToElasticsearch(docs: ComposedDoc[]): Promise<void> {
+async function aliasExists(aliasName: string): Promise<boolean> {
+  const es = getClient();
+  if (!es) return false;
+  const exists = await es.indices.exists({ index: aliasName });
+  return Boolean(exists);
+}
+
+async function pointAliasToIndex(indexName: string): Promise<void> {
+  const es = getClient();
+  if (!es) return;
+
+  let existingIndices: string[] = [];
+  try {
+    const aliases = await es.indices.getAlias({ name: ES_ALIAS_CURRENT });
+    existingIndices = Object.keys(aliases);
+  } catch (error: any) {
+    if (error?.meta?.statusCode !== 404) {
+      throw error;
+    }
+  }
+
+  const actions: Array<Record<string, { index: string; alias: string }>> = [];
+  for (const index of existingIndices) {
+    actions.push({ remove: { index, alias: ES_ALIAS_CURRENT } });
+  }
+  actions.push({ add: { index: indexName, alias: ES_ALIAS_CURRENT } });
+
+  await es.indices.updateAliases({ actions });
+}
+
+export async function indexDocsToElasticsearch(
+  docs: ComposedDoc[],
+  scheduleCode: string,
+): Promise<void> {
   const es = getClient();
   if (!es || docs.length === 0) return;
-  await ensureIndex();
+  const indexName = indexNameForSchedule(scheduleCode);
+  await ensureIndex(indexName);
 
   const operations = docs.flatMap((doc) => [
-    { index: { _index: ES_INDEX, _id: doc.id } },
+    { index: { _index: indexName, _id: doc.id } },
     {
       title: doc.title,
       body: doc.body,
@@ -116,6 +155,7 @@ export async function indexDocsToElasticsearch(docs: ComposedDoc[]): Promise<voi
         },
       },
     );
+    await pointAliasToIndex(indexName);
   } catch (error: any) {
     const body = error?.meta?.body;
     console.error("Elasticsearch bulk index failed", {
@@ -131,7 +171,8 @@ export async function indexDocsToElasticsearch(docs: ComposedDoc[]): Promise<voi
 export async function searchElasticsearch(params: SearchParamsLite): Promise<EsSearchResult[]> {
   const es = getClient();
   if (!es) return [];
-  await ensureIndex();
+  const exists = await aliasExists(ES_ALIAS_CURRENT);
+  if (!exists) return [];
 
   const limit = Math.min(params.limit ?? 20, 100);
   const must: QueryDslQueryContainer[] = [
@@ -157,7 +198,7 @@ export async function searchElasticsearch(params: SearchParamsLite): Promise<EsS
 
   const result = await es.search<EsSearchResult>(
     {
-      index: ES_INDEX,
+      index: ES_ALIAS_CURRENT,
       size: limit,
       query: {
         bool: {
