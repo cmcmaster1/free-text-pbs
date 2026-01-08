@@ -86,6 +86,38 @@ export async function latestScheduleCode(): Promise<string | null> {
   return rows[0]?.schedule_code ?? null;
 }
 
+export async function latestScheduleInfo(): Promise<{
+  scheduleCode: string;
+  effectiveDate: string;
+} | null> {
+  const { rows } = await pool.query<{ schedule_code: string; effective_date: string }>(
+    `SELECT schedule_code, effective_date
+     FROM pbs_schedule
+     ORDER BY effective_date DESC
+     LIMIT 1`,
+  );
+  const row = rows[0];
+  if (!row) return null;
+  return {
+    scheduleCode: row.schedule_code,
+    effectiveDate: row.effective_date,
+  };
+}
+
+export async function listSchedules(): Promise<
+  Array<{ scheduleCode: string; effectiveDate: string }>
+> {
+  const { rows } = await pool.query<{ schedule_code: string; effective_date: string }>(
+    `SELECT schedule_code, effective_date
+     FROM pbs_schedule
+     ORDER BY effective_date DESC`,
+  );
+  return rows.map((row) => ({
+    scheduleCode: row.schedule_code,
+    effectiveDate: row.effective_date,
+  }));
+}
+
 export async function searchDocs(params: SearchParams): Promise<SearchResult[]> {
   const q = normalizeQuery(params.q);
   if (!q) return [];

@@ -5,7 +5,9 @@ import { config } from "dotenv";
 
 import docRoutes from "./routes.doc.js";
 import ingestRoutes from "./routes.ingest.js";
+import metaRoutes from "./routes.meta.js";
 import searchRoutes from "./routes.search.js";
+import scheduleRoutes from "./routes.schedule.js";
 import { pool } from "../db/pool.js";
 
 config();
@@ -38,6 +40,8 @@ app.get("/api/debug/db", async (_req, res) => {
 app.use("/api", searchRoutes);
 app.use("/api", docRoutes);
 app.use("/api", ingestRoutes);
+app.use("/api", metaRoutes);
+app.use("/api", scheduleRoutes);
 
 const port = Number(process.env.PORT ?? 3000);
 app.listen(port, () => {

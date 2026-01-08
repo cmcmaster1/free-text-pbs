@@ -12,6 +12,7 @@ export function parseCsvTable<T extends Record<string, string>>(
   const parsed = Papa.parse<T>(csv, {
     header: true,
     skipEmptyLines: true,
+    delimiter: ",",
   });
 
   if (parsed.errors.length > 0) {

@@ -14,7 +14,11 @@ export interface IngestOptions {
 export async function runIngest(options: IngestOptions = {}) {
   const targetDate = options.targetDate ? new Date(options.targetDate) : new Date();
 
-  const resolved = await resolveScheduleUrl(targetDate, options.lookbackMonths);
+  const resolved = await resolveScheduleUrl(
+    targetDate,
+    options.lookbackMonths,
+    !options.targetDate,
+  );
   console.log(`Resolved schedule ${resolved.scheduleCode} → ${resolved.url}`);
 
   const zipBuffer = await downloadScheduleZip(resolved.url);
@@ -39,7 +43,7 @@ export async function runIngest(options: IngestOptions = {}) {
     docs,
   );
 
-  await indexDocsToElasticsearch(docs);
+  await indexDocsToElasticsearch(docs, resolved.scheduleCode);
 
   await embedMissingDocs({ scheduleCode: resolved.scheduleCode });
 
