@@ -9,6 +9,7 @@
 
 ## Local Development
 - Install: `npm install`
+- Start local services (Postgres + Elasticsearch): `docker compose up -d`
 - Typecheck: `npm run typecheck`
 - Migrations (requires `DATABASE_URL`): `npm run migrate`
 - Ingest latest schedule: `npm run ingest:latest`
@@ -17,6 +18,8 @@
 - Dev server: `npm run dev` (runs API on `PORT`, defaults to 3000)
 
 ### Environment Variables
+- Copy `.env.example` to `.env` and edit as needed.
+- Optional: use direnv with `.envrc` (`direnv allow`) to auto-load `.env`.
 - `DATABASE_URL` (Postgres connection string)
 - `PGSSLMODE` (`disable` for Railway internal, `require` for public proxy)
 - `PBS_DOWNLOAD_BASE` (default `https://www.pbs.gov.au/downloads`)

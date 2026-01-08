@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres:16
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: pbs
+      POSTGRES_PASSWORD: pbs
+      POSTGRES_DB: pbs
+    volumes:
+      - pbs_pg_data:/var/lib/postgresql/data
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.2
+    ports:
+      - "9200:9200"
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      xpack.security.http.ssl.enabled: "false"
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+    volumes:
+      - pbs_es_data:/usr/share/elasticsearch/data
+
+volumes:
+  pbs_pg_data:
+  pbs_es_data:
